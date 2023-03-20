@@ -28,6 +28,7 @@ function createWindow() {
         resizable: false,
         minimizable: false,
         maximizable: false,
+        alwaysOnTop: true,
         webPreferences: {
             nodeIntegration: true, //引入node和electron相关的API
             enableRemoteModule: true, // 可以使用remote方法
@@ -38,7 +39,8 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
-    ipcMain.handle("dialog:myOpenFile", handleFileOpen);
+    ipcMain.removeHandler("dialog:myOpenFile");
+    ipcMain.handleOnce("dialog:myOpenFile", handleFileOpen);
     createWindow()
 
     app.on('activate', () => {

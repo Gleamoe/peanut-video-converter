@@ -2,8 +2,9 @@
   "name": "peanut-video-converter",
   "nickname": "视频格式转换器",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
+  "repository": "https://github.com/Gleamoe/peanut-video-converter",
   "author": {
     "name": "yliu7949",
     "email": "yliu7949@gleamoe.com",
