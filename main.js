@@ -40,7 +40,7 @@ function createWindow() {
 
 app.whenReady().then(() => {
     ipcMain.removeHandler("dialog:myOpenFile");
-    ipcMain.handleOnce("dialog:myOpenFile", handleFileOpen);
+    ipcMain.handle("dialog:myOpenFile", handleFileOpen);
     createWindow()
 
     app.on('activate', () => {

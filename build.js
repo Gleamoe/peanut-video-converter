@@ -19,6 +19,7 @@ fsExtra.copySync("./dist", pluginPath + "/dist");
 fs.copyFileSync("./preload.js", pluginPath + "/dist/preload.js");
 fs.copyFileSync("./README.md", pluginPath + "/README.md");
 fs.copyFileSync("./LICENSE", pluginPath + "/LICENSE");
+fs.copyFileSync("./ffmpeg-LICENSE.txt", pluginPath + "/dist/ffmpeg-LICENSE.txt");
 fs.copyFileSync("./ffmpeg.exe", pluginPath + "/dist/ffmpeg.exe");
 
 delete packageFile.dependencies;
