@@ -13,7 +13,7 @@ contextBridge.exposeInMainWorld("electronAPI", {
         }
 
         return new Promise((resolve, reject) => {
-            let ffmpegProcess = spawn(ffmpeg, ['-i', inputVideoPath, outputVideoPath]);
+            let ffmpegProcess = spawn(ffmpeg, ['-i', inputVideoPath, "-c:v libx264", outputVideoPath]);
 
             ffmpegProcess.stderr.on('data', (data) => {
                 let output = data.toString();
